@@ -1,0 +1,93 @@
+/* Grille principale pour les produits */
+#boutique-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    margin-bottom: 100px;
+    font-family: 'Garet', sans-serif;
+}
+
+/* Carte d’un produit */
+.carte-produit {
+    background-color: #100734;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    color: white;
+}
+
+.carte-produit:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.carte-produit img {
+    height: 300px;
+    width: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Titre du produit */
+.carte-produit h2 {
+    font-size: 1.2rem;
+    margin: 1rem 0 0.5rem;
+    color: white;
+    font-family: 'Garet', sans-serif;
+}
+
+/* Description courte */
+.minidescription {
+    font-size: 0.95rem;
+    color: #cccccc;
+    margin-bottom: 1rem;
+}
+
+/* Prix */
+.prix {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #8d87ff;
+
+}
+
+/* Bouton Ajouter au panier */
+.btn-ajouter {
+    background-color: #000000;
+    border: 1px solid #ffffff;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-ajouter:hover {
+    background-color: #1c1c1c;
+}
+
+/* Titres des sections */
+.titre-section {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    color: #c4a5f8;
+    font-family: 'Garet', sans-serif;
+}
+
+.titre-goodies {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: -5rem;
+    margin-bottom: 1rem;
+    color: #c4a5f8;
+    font-family: 'Garet', sans-serif;
+}
+
+

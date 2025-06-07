@@ -1,0 +1,470 @@
+#accueil-grid {
+  display: grid;
+  grid-template-rows: auto auto auto auto auto;
+  grid-template-columns: 1fr;
+  height: 100%;
+}
+
+
+.bienvenue {
+  grid-row: 1/2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Garet', sans-serif;
+  color: white;
+  text-align: center;
+  
+  margin: 40px auto 20px auto;
+  z-index: 1;
+}
+
+
+.bienvenue p {
+  font-size: 1.5rem;
+  width: 60%;
+}
+
+.typeJsWrapper {
+  margin-bottom: 20px; 
+;}
+
+.typeJsWrapper .typeJsText {
+  text-align: center;
+  font-family: 'Tristan', sans-serif;
+  font-size: 6rem;
+  color: white
+}
+
+
+.carousel {
+  grid-row: 2/3;
+}
+
+.carousel-container {
+  width: 80%;
+  max-width: 1500px;
+  overflow: hidden;
+  margin: 10px auto 70px auto;
+  position: relative;
+  z-index: 1;
+}
+
+.carousel-track {
+  display: flex;
+  will-change: transform;
+  transition: transform 0.4s ease-in-out;
+}
+
+.carousel-item {
+  flex: 0 0 33.33%;
+  padding: 15px 10px;
+  transition: filter 0.3s ease, transform 0.3s ease;
+  filter: blur(3px);
+  opacity: 0.6;
+  pointer-events: none;
+  height: auto;
+}
+
+.carousel-item.active {
+  filter: none;
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1.05);
+}
+
+
+.beer-card {
+  background: linear-gradient(135deg, #32195a 0%, #120021 100%);
+  border-radius: 16px;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+.beer-card img {
+  height: 450px;
+  border-radius: 12px;
+  cursor: pointer;
+  padding: 15px;
+  padding-top: 20px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.beer-card img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.beer-info {
+  margin-bottom: 18px;
+}
+
+.beer-info h3 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.beer-info p {
+  font-size: 1rem;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+
+.nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: white;
+  background: rgba(0, 0, 0, 0.4);
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 0.3rem 1rem;
+  z-index: 2;
+  transition: 0.3s ease, transform 0.3s ease;
+}
+
+.nav-button:hover {
+  background: rgba(0, 0, 0, 0.6);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.prev { left: 0; }
+.next { right: 0; }
+
+
+.carousel-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Garet', sans-serif;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: white;
+  border: none;
+  border-radius: 13px;
+  background: linear-gradient(135deg, #32195a 0%, #120021 70%);
+  cursor: pointer;
+  z-index: 2;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin: 0 auto;
+  padding: 10px 20px;
+  margin-top: 20px;
+  box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.3);
+}
+
+.carousel-button:hover {
+  background: linear-gradient(135deg, #32195a 0%, #120021 100%);
+  transform: translateY(-50%) scale(1.05);
+}
+
+.carousel-button a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.carousel-item a {
+  text-decoration: none;
+}
+
+
+
+
+
+
+/* Section histoire */
+.histoire {
+  grid-row: 3/4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Garet', sans-serif;
+  color: white;
+  text-align: center;
+  margin: 50px auto 20px auto;
+  z-index: 1;
+  background-color: rgba(36, 14, 66, 0.85);
+  padding: 40px 0;
+  width: 100%;
+}
+
+/* Contenu texte */
+.histoire-container {
+  width: 80%;
+  padding: 20px 40px 40px 40px;
+  background: linear-gradient(135deg, #32195a 0%, #120021 100%);
+  border-radius: 16px;
+  box-shadow: 0px 0px 25px rgba(172, 104, 255, 0.2);
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.histoire-container h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+
+/* Conteneur des orbites */
+.orbite-container {
+  position: relative;
+  height: 700px;
+  width: 700px;
+  margin: 0 auto;
+}
+
+/* Soleil au centre */
+.sun {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: linear-gradient(to right, orange, orange);
+  box-shadow: 0px 0px 150px 25px orange, 0px 0px 50px 5px orange;
+  z-index: 2;
+  animation: pulse-sun 3s ease-in-out infinite;
+}
+
+@keyframes pulse-sun {
+  0% {
+    transform: translate(-50%, -50%) scale(1.30);
+    box-shadow: 0 0 20px 10px rgba(249, 215, 28, 0.5);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.50);
+    box-shadow: 0 0 30px 15px rgba(249, 215, 28, 0.7);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.30);
+    box-shadow: 0 0 20px 10px rgba(249, 215, 28, 0.5);
+  }
+}
+
+
+
+
+/* Orbites autour du soleil */
+.planet_1-orbit,
+.planet_2-orbit,
+.planet_3-orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid lightgrey;
+  border-radius: 50%;
+  opacity: 75%;
+  animation: orbit linear infinite;
+}
+
+/* Spécificités des orbites */
+.planet_1-orbit {
+  width: 350px;
+  height: 350px;
+  animation-duration: 4s;
+}
+
+.planet_2-orbit {
+  width: 470px;
+  height: 470px;
+  animation-duration: 6s;
+}
+
+.planet_3-orbit {
+  width: 590px;
+  height: 590px;
+  animation-duration: 8s;
+}
+
+/* Conteneur des planètes */
+.planet {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+}
+
+/* Image dans chaque planète */
+.planet img {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+/* Animation orbitale */
+@keyframes orbit {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+
+
+
+.fleche-fruit {
+  align-self: flex-start;
+  padding-left: 400px;
+  max-width: 800px;
+  margin-top: -100px;
+  margin-bottom: 20px;
+}
+
+.fleche-fruit img {
+  width: 120px;
+  transform: rotate(10deg);
+  animation: floating 2s ease-in-out infinite;
+  opacity: 0.8;
+}
+
+@keyframes floating {
+  0% { transform: translateY(0) rotate(10deg); }
+  50% { transform: translateY(-5px) rotate(10deg); }
+  100% { transform: translateY(0) rotate(10deg); }
+}
+
+
+.histoire-fruit {
+  width: 55%;
+  padding: 20px 40px 20px 40px;
+  background: linear-gradient(135deg, #32195a 0%, #120021 100%);
+  border-radius: 16px;
+  box-shadow: 0px 0px 25px rgba(172, 104, 255, 0.2);
+  margin-bottom: 20px;
+}
+
+
+/* Style pour la section vidéo promotionnelle */
+.video-promotion {
+  background-color: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 12px;
+  backdrop-filter: blur(5px);
+  width: 80%;
+  max-width: 900px;
+  margin: 60px auto 130px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.video-promotion::before {
+  content: '';
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(circle, #ac68ff55 0%, transparent 80%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.video-promotion::after {
+  content: '';
+  position: absolute;
+  bottom: -40px;
+  left: -40px;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle, #fff2 0%, transparent 80%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.video-promotion h2 {
+  font-size: 2.2rem;
+  margin-bottom: 28px;
+  letter-spacing: 1.5px;
+  color: #fff;
+  text-shadow: 0 2px 12px #ac68ff44;
+  z-index: 1;
+  position: relative;
+}
+
+.video-promotion video {
+  border-radius: 18px;
+  box-shadow: 0 4px 32px 0 rgba(172,104,255,0.22), 0 1.5px 8px 0 rgba(0,0,0,0.18);
+  outline: none;
+  background: #120021;
+  z-index: 1;
+  position: relative;
+  width: 100%;
+  max-width: 640px;
+  height: auto;
+  transition: box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.video-promotion video:focus,
+.video-promotion video:hover {
+  box-shadow: 0 8px 48px 0 #ac68ff55, 0 1.5px 8px 0 rgba(0,0,0,0.18);
+}
+
+.video-promotion p {
+  font-size: 1.15rem;
+  width: 100%;
+  margin-top: 18px;
+  margin-bottom: 18px;
+  color: #e7dfff;
+  z-index: 1;
+  position: relative;
+  text-align: center;
+}
+
+.video-promotion a {
+  color: #ac68ff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s, text-shadow 0.2s;
+  position: relative;
+  z-index: 1;
+}
+
+.video-promotion a:hover {
+  color: #fff;
+  text-shadow: 0 0 8px #ac68ff, 0 0 2px #fff;
+}
+
+.video-promotion a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #ac68ff;
+  left: 0;
+  bottom: -2px;
+  transition: width 0.3s;
+}
+
+.video-promotion a:hover::after {
+  width: 100%;
+}
+
+
+iframe {
+  width: 80%;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0px 0px 25px rgba(172, 104, 255, 0.2);
+}

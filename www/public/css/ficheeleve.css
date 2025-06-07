@@ -1,0 +1,110 @@
+.btn-retour-trombi {
+    position: absolute;
+    top: 160px;
+    left: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 0.5rem 1.2rem;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    font-family: 'Garet', sans-serif;
+    z-index: 1000;
+}
+
+.btn-retour-trombi:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+}
+
+.fiche-eleve-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 2rem;
+    font-family: 'Garet', sans-serif;
+    color: white;
+    max-width: 1200px;
+    margin: 20px auto 100px auto;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .fiche-eleve-container {
+        flex-direction: row;
+        gap: 3rem;
+    }
+}
+
+.fiche-eleve-image img {
+    max-width: 100%;
+    height: auto;
+    max-height: 600px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.fiche-eleve-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.fiche-eleve-details h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+}
+
+.tag-eleve {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    margin-right: 0.5rem;
+    color: #eeeeee;
+}
+
+.resume {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-top: 1.2rem;
+    color: #dddddd;
+}
+
+
+
+
+.social-link {
+    display: inline;
+    color: #b98bff;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.social-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #b98bff;
+    left: 0;
+    bottom: -2px;
+    transition: width 0.3s ease-in-out;
+}
+
+.social-link:hover::after {
+    width: 100%;
+}
+
+.social-link:hover {
+    color: #b98bff;
+}

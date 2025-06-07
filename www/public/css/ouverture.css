@@ -1,0 +1,91 @@
+header, footer {
+  display: none;
+}
+
+body {
+  margin: 0;
+  background-color: black;
+  overflow: hidden;
+}
+
+
+.app {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  overflow: hidden;
+}
+
+
+
+.app .center {
+  z-index: 100;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 40vmin;
+  height: 40vmin;
+  border-radius: 50%;
+  background-image: radial-gradient(
+    circle at 50% 50%,
+    rgba(0, 0, 0, 1) 0,
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 0) 50%
+  );
+}
+
+
+
+
+
+.app .container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 300px;
+  height: 1px;
+  transform-origin: left 50%;
+}
+
+.app .container .star {
+  border-radius: 50%;
+  background-color: white;
+  animation-name: hyperspace;
+  animation-duration: 500ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+
+
+.container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100vw;
+  height: 1px;
+  transform-origin: left center;
+}
+
+.star {
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 50%;
+}
+
+@keyframes hyperspace {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100vw);
+    opacity: 0;
+  }
+}
+

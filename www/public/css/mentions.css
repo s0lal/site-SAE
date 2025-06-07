@@ -1,0 +1,49 @@
+h1, h2 {
+  color: #6952a1;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+
+.content a {
+  text-decoration: none;
+  color: #6952a1;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+}
+
+.content a:hover {
+    color: #9172df;
+}
+
+.content a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #9172df;
+    left: 0;
+    bottom: -2px;
+    transition: width 0.3s ease-in-out;
+}
+
+.content a:hover::after {
+    width: 100%;
+}
+
+
+.content {
+  max-width: 1200px;
+  margin: 10px auto;
+  padding: 2rem;
+  position: relative;
+  z-index: 1;
+  color: white;
+  margin-bottom: 100px;
+}
+
+  
